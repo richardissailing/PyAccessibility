@@ -1,0 +1,192 @@
+import pytest
+from bs4 import BeautifulSoup
+from pyaccessibility.rules.focus_rules import (
+    FocusIndicatorRule,
+    LanguageRule,
+    TableAccessibilityRule,
+)
+
+
+@pytest.mark.asyncio
+class TestFocusIndicatorRule:
+    async def test_interactive_elements_without_outline(self) -> None:
+        rule = FocusIndicatorRule()
+        html = '''
+            <div>
+                <a href="#" style="outline: none">Link</a>
+                <button style="outline: 0">Button</button>
+                <input type="text" style="outline:none"/>
+                <select style="outline: 0;"><option>Select</option></select>
+            </div>
+        '''
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 4
+        assert all(
+            "removes focus indicator" in v.description.lower()
+            for v in violations
+        )
+
+    async def test_contenteditable_elements(
+        self
+    ) -> None:
+        rule = FocusIndicatorRule()
+        html = (
+            '<div contenteditable="true" style="outline: none">'
+            'Editable</div>'
+        )
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 1
+        assert "removes focus indicator" in violations[0].description.lower()
+
+    async def test_summary_details_elements(self) -> None:
+        rule = FocusIndicatorRule()
+        html = '''
+            <details>
+                <summary style="outline: none">Details</summary>
+                <p>Content</p>
+            </details>
+        '''
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 1
+        assert "removes focus indicator" in violations[0].description.lower()
+
+    async def test_custom_tabindex_elements(self) -> None:
+        rule = FocusIndicatorRule()
+        html = '''
+            <div tabindex="0" style="outline: none">Focusable div</div>
+            <span tabindex="-1">Not focusable</span>
+            <p tabindex="invalid">
+                Invalid tabindex
+            </p>
+        '''
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        # One for outline:none, one for negative tabindex
+        assert len(violations) == 2
+
+
+@pytest.mark.asyncio
+class TestLanguageRule:
+    async def test_missing_html_tag(self) -> None:
+        rule = LanguageRule()
+        html = '<body><p>Content</p></body>'
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 1
+        assert "no html root element" in violations[0].description.lower()
+
+    async def test_missing_lang_attribute(self) -> None:
+        rule = LanguageRule()
+        html = '<html><body>Content</body></html>'
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 1
+        assert "missing language declaration" in \
+            violations[0].description.lower()
+
+    async def test_invalid_language_code(self) -> None:
+        rule = LanguageRule()
+        html = '<html lang="xx"><body>Content</body></html>'
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 1
+        assert "invalid language code" in violations[0].description.lower()
+
+    async def test_mixed_language_content(self) -> None:
+        rule = LanguageRule()
+        html = '''
+            <html lang="en">
+                <body>
+                    <p>English content</p>
+                    <p lang="es">Spanish content</p>
+                    <p lang="invalid">Invalid language</p>
+                </body>
+            </html>
+        '''
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 1
+        assert "invalid language code in content" in \
+            violations[0].description.lower()
+
+
+@pytest.mark.asyncio
+class TestTableAccessibilityRule:
+    async def test_basic_table_issues(self) -> None:
+        rule = TableAccessibilityRule()
+        html = '<table><tr><td>Data</td></tr></table>'
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 2  # Missing caption and headers
+
+    async def test_missing_header_scope(self) -> None:
+        rule = TableAccessibilityRule()
+        html = '''
+            <table>
+                <caption>Table caption</caption>
+                <tr><th>Header</th></tr>
+                <tr><td>Data</td></tr>
+            </table>
+        '''
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 2  # Missing scope and header association
+
+    async def test_complex_table_structure(self) -> None:
+        rule = TableAccessibilityRule()
+        html = '''
+            <table>
+                <caption>Complex table</caption>
+                <tr>
+                    <th scope="col">Header 1</th>
+                    <th>Header 2</th>
+                </tr>
+                <tr>
+                    <th scope="row">Row header</th>
+                    <td>Data</td>
+                </tr>
+            </table>
+        '''
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 1  # Missing scope on one header
+
+    async def test_nested_tables(self) -> None:
+        rule = TableAccessibilityRule()
+        html = '''
+            <table>
+                <caption>Outer table</caption>
+                <tr>
+                    <td>
+                        <table>
+                            <tr><td>Nested table</td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        '''
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) >= 3  # Multiple issues in both tables
+
+    async def test_table_with_valid_structure(self) -> None:
+        rule = TableAccessibilityRule()
+        html = '''
+            <table>
+                <caption>Valid table</caption>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                </tr>
+                <tr>
+                    <td headers="name">John</td>
+                    <td headers="age">30</td>
+                </tr>
+            </table>
+        '''
+        soup = BeautifulSoup(html, 'html5lib')
+        violations = await rule.check(soup)
+        assert len(violations) == 0  # No violations for valid structure

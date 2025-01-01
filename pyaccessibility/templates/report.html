@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Report - {{ url }}</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --error-color: #dc2626;
+            --warning-color: #f59e0b;
+            --success-color: #16a34a;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 2rem;
+            color: #1f2937;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .summary {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .violation {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background: white;
+            border-left: 4px solid var(--error-color);
+        }
+        
+        .violation.warning {
+            border-left-color: var(--warning-color);
+        }
+        
+        .violation.info {
+            border-left-color: var(--primary-color);
+        }
+        
+        .code {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+        
+        .fix {
+            background: #ecfdf5;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin-top: 0.5rem;
+        }
+        
+        .score {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Accessibility Report</h1>
+        <p>URL: {{ url }}</p>
+        <p>Scan completed: {{ stats.timestamp }}</p>
+
+        <div class="summary">
+            <h2>Summary</h2>
+            <p>Compliance Score: <span class="score">{{ "%.1f"|format(stats.compliance_score) }}%</span></p>
+            <ul>
+                <li>Total Issues: {{ stats.total_violations }}</li>
+                <li>Elements Checked: {{ stats.elements_checked }}</li>
+                <li>Scan Duration: {{ "%.2f"|format(stats.scan_duration_ms) }}ms</li>
+                <li>Issues by Severity:
+                    <ul>
+                        <li>Critical: {{ stats.severity_counts.critical }}</li>
+                        <li>Errors: {{ stats.severity_counts.error }}</li>
+                        <li>Warnings: {{ stats.severity_counts.warning }}</li>
+                        <li>Info: {{ stats.severity_counts.info }}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        {% for criterion, violations in grouped_violations.items() %}
+        <section>
+            <h2>{{ "WCAG " + criterion if criterion != "other" else "Other Issues" }}</h2>
+            {% for violation in violations %}
+            <div class="violation {{ violation.severity }}">
+                <h3>{{ violation.description }}</h3>
+                <p><strong>Severity:</strong> {{ violation.severity }}</p>
+                {% if violation.wcag_criterion %}
+                <p><strong>WCAG Criterion:</strong> {{ violation.wcag_criterion }}</p>
+                {% endif %}
+                <div class="code">{{ violation.element }}</div>
+                {% if violation.suggested_fix %}
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> {{ violation.suggested_fix }}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </section>
+        {% endfor %}
+    </div>
+</body>

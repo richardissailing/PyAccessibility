@@ -1,0 +1,2561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Report - https://www.theguardian.com/au</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --error-color: #dc2626;
+            --warning-color: #f59e0b;
+            --success-color: #16a34a;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 2rem;
+            color: #1f2937;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .summary {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .violation {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background: white;
+            border-left: 4px solid var(--error-color);
+        }
+        
+        .violation.warning {
+            border-left-color: var(--warning-color);
+        }
+        
+        .violation.info {
+            border-left-color: var(--primary-color);
+        }
+        
+        .code {
+            background: #1f2937;
+            color: #e5e7eb;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+        
+        .fix {
+            background: #ecfdf5;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin-top: 0.5rem;
+        }
+        
+        .score {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Accessibility Report</h1>
+        <p>URL: https://www.theguardian.com/au</p>
+        <p>Scan completed: 2025-01-01T11:45:04.033716</p>
+
+        <div class="summary">
+            <h2>Summary</h2>
+            <p>Compliance Score: <span class="score">78.4%</span></p>
+            <ul>
+                <li>Total Issues: 175</li>
+                <li>Elements Checked: 558</li>
+                <li>Scan Duration: 939.69ms</li>
+                <li>Issues by Severity:
+                    <ul>
+                        <li>Critical: 0</li>
+                        <li>Errors: 170</li>
+                        <li>Warnings: 5</li>
+                        <li>Info: 0</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        
+        <section>
+            <h2>WCAG 1.1.1</h2>
+            
+            <div class="violation error">
+                <h3>Image missing alt text</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 1.1.1</p>
+                
+                <div class="code">&lt;img src=&#34;https://sb.scorecardresearch.com/p?c1=2&amp;amp;c2=6035250&amp;amp;cv=2.0&amp;amp;cj=1&amp;amp;cs_ucfr=0&amp;amp;comscorekw=Network+Front&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Add alt=&#34;[descriptive text]&#34; to the img element
+                </div>
+                
+            </div>
+            
+            <div class="violation warning">
+                <h3>Alt text is too long (&gt; 125 characters)</h3>
+                <p><strong>Severity:</strong> warning</p>
+                
+                <p><strong>WCAG Criterion:</strong> 1.1.1</p>
+                
+                <div class="code">&lt;img alt=&#34;This still image taken from video and provided by Airline Videos Live shows the Gonzaga University men&#39;s basketball team plane, back left, taxiing and being told to stop on the runway at Los Angeles International Airport on Friday.&#34; class=&#34;dcr-l300o4&#34; data-chromatic=&#34;ignore&#34; loading=&#34;lazy&#34; src=&#34;https://i.guim.co.uk/img/media/6a9a803a7750170739964a1a1750d3c8912d60eb/424_0_6557_3938/master/6557.jpg?width=120&amp;amp;dpr=1&amp;amp;s=none&amp;amp;crop=none&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Consider using aria-describedby for longer descriptions
+                </div>
+                
+            </div>
+            
+            <div class="violation warning">
+                <h3>Alt text is too long (&gt; 125 characters)</h3>
+                <p><strong>Severity:</strong> warning</p>
+                
+                <p><strong>WCAG Criterion:</strong> 1.1.1</p>
+                
+                <div class="code">&lt;img alt=&#34;Two men wearing barrister&#39;s wigs and white neck ruffles, with no shirts on, stand in front of a green velvet curtain on which white sculptures of penises of different shapes and sizes are mounted. One man is holding a wine bottle, another holds a bunch of grapes.&#34; class=&#34;dcr-l300o4&#34; data-chromatic=&#34;ignore&#34; loading=&#34;lazy&#34; src=&#34;https://i.guim.co.uk/img/media/946acd4f627cc5007d682ffba5ad3cb287fd6a5a/747_685_6998_4201/master/6998.jpg?width=120&amp;amp;dpr=1&amp;amp;s=none&amp;amp;crop=none&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Consider using aria-describedby for longer descriptions
+                </div>
+                
+            </div>
+            
+            <div class="violation warning">
+                <h3>Alt text is too long (&gt; 125 characters)</h3>
+                <p><strong>Severity:</strong> warning</p>
+                
+                <p><strong>WCAG Criterion:</strong> 1.1.1</p>
+                
+                <div class="code">&lt;img alt=&#34;A showing of Lord of the Rings, the Musical is shown at the Shakespeare Theatre in Chicago. Cast members gather around Frodo who is holding the Ring up to the spotlight.&#34; class=&#34;dcr-l300o4&#34; data-chromatic=&#34;ignore&#34; loading=&#34;lazy&#34; src=&#34;https://i.guim.co.uk/img/media/52df07ff343357396758aa1efc2e1e138e387813/267_797_2972_1784/master/2972.jpg?width=120&amp;amp;dpr=1&amp;amp;s=none&amp;amp;crop=none&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Consider using aria-describedby for longer descriptions
+                </div>
+                
+            </div>
+            
+            <div class="violation warning">
+                <h3>Alt text is too long (&gt; 125 characters)</h3>
+                <p><strong>Severity:</strong> warning</p>
+                
+                <p><strong>WCAG Criterion:</strong> 1.1.1</p>
+                
+                <div class="code">&lt;img alt=&#34;Composite image featuring (L-R) Australian prime minister Anthony Albanese, RBA Governor Michele Bullock, US president-elect Donald Trump and opposition leader Peter Dutton&#34; class=&#34;dcr-l300o4&#34; data-chromatic=&#34;ignore&#34; loading=&#34;lazy&#34; src=&#34;https://i.guim.co.uk/img/media/494ed1322727139f76de9284654928ac771c1757/0_0_2500_1500/master/2500.jpg?width=360&amp;amp;dpr=1&amp;amp;s=none&amp;amp;crop=none&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Consider using aria-describedby for longer descriptions
+                </div>
+                
+            </div>
+            
+            <div class="violation warning">
+                <h3>Alt text is too long (&gt; 125 characters)</h3>
+                <p><strong>Severity:</strong> warning</p>
+                
+                <p><strong>WCAG Criterion:</strong> 1.1.1</p>
+                
+                <div class="code">&lt;img alt=&#34;MCP project coordinator Pierre Defourny and Bush Heritage Australia ecologist Matt Appleby. ‘Only 30% of original vegetation on the Midlands survive,’ says Defourny.&#34; class=&#34;dcr-l300o4&#34; data-chromatic=&#34;ignore&#34; loading=&#34;lazy&#34; src=&#34;https://i.guim.co.uk/img/media/bc3677d1bd4762db39d43c9f9f0c1cddd00f33b3/330_175_3143_1886/master/3143.jpg?width=120&amp;amp;dpr=1&amp;amp;s=none&amp;amp;crop=none&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Consider using aria-describedby for longer descriptions
+                </div>
+                
+            </div>
+            
+        </section>
+        
+        <section>
+            <h2>WCAG 2.4.7</h2>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;button aria-label=&#34;Search with Google&#34; aria-live=&#34;polite&#34; class=&#34;dcr-1gsboxi&#34; data-link-name=&#34;header : search : submit&#34; tabindex=&#34;-1&#34; type=&#34;submit&#34;&gt;&lt;div class=&#34;src-button-space&#34;&gt;&lt;/div&gt;&lt;svg aria-hidden=&#34;true&#34; viewBox=&#34;-3 -3 30 30&#34; width=&#34;30&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path clip-rule=&#34;evenodd&#34; d=&#34;M1 12.956h18.274l-7.167 8.575.932.932L23 12.478v-.956l-9.96-9.985-.932.932 7.166 8.575H1z&#34; fill-rule=&#34;evenodd&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;button aria-label=&#34;Search with Google&#34; aria-live=&#34;polite&#34; class=&#34;dcr-1gsboxi&#34; data-link-name=&#34;header : search : submit&#34; tabindex=&#34;-1&#34; type=&#34;submit&#34;&gt;&lt;div class=&#34;src-button-space&#34;&gt;&lt;/div&gt;&lt;svg aria-hidden=&#34;true&#34; viewBox=&#34;-3 -3 30 30&#34; width=&#34;30&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path clip-rule=&#34;evenodd&#34; d=&#34;M1 12.956h18.274l-7.167 8.575.932.932L23 12.478v-.956l-9.96-9.985-.932.932 7.166 8.575H1z&#34; fill-rule=&#34;evenodd&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-checked=&#34;false&#34; id=&#34;checkbox-id-masthead-edition&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;header-nav-input-checkbox&#34; name=&#34;more&#34; role=&#34;button&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;News-checkbox-input&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;label aria-controls=&#34;newsLinks&#34; aria-haspopup=&#34;true&#34; aria-label=&#34;Toggle News&#34; class=&#34;selectableMenuItem dcr-o6rk0u&#34; data-link-name=&#34;header : secondary : News&#34; data-testid=&#34;column-collapse-News&#34; for=&#34;News-checkbox-input&#34; id=&#34;News-button&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;News&lt;/label&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : View all News&#34; data-testid=&#34;column-collapse-sublink-News&#34; href=&#34;/&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;View all News&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Australia news&#34; data-testid=&#34;column-collapse-sublink-Australia&#34; href=&#34;/australia-news&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Australia news&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : World news&#34; data-testid=&#34;column-collapse-sublink-World&#34; href=&#34;/world&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;World news&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Politics&#34; data-testid=&#34;column-collapse-sublink-AU politics&#34; href=&#34;/australia-news/australian-politics&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Politics&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Environment&#34; data-testid=&#34;column-collapse-sublink-Environment&#34; href=&#34;/environment&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Environment&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Climate crisis&#34; data-testid=&#34;column-collapse-sublink-Climate crisis&#34; href=&#34;/environment/climate-crisis&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Climate crisis&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Indigenous Australia&#34; data-testid=&#34;column-collapse-sublink-Indigenous Australia&#34; href=&#34;/australia-news/indigenous-australians&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Indigenous Australia&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Immigration&#34; data-testid=&#34;column-collapse-sublink-Immigration&#34; href=&#34;/australia-news/australian-immigration-and-asylum&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Immigration&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Media&#34; data-testid=&#34;column-collapse-sublink-Media&#34; href=&#34;/media&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Media&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Business&#34; data-testid=&#34;column-collapse-sublink-Business&#34; href=&#34;/business&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Business&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Health&#34; data-testid=&#34;column-collapse-sublink-Health&#34; href=&#34;/australia-news/health&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Health&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Science&#34; data-testid=&#34;column-collapse-sublink-Science&#34; href=&#34;/science&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Science&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Tech&#34; data-testid=&#34;column-collapse-sublink-Tech&#34; href=&#34;/technology&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Tech&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Podcasts&#34; data-testid=&#34;column-collapse-sublink-Podcasts&#34; href=&#34;/au/podcasts&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Podcasts&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Newsletters&#34; data-testid=&#34;column-collapse-sublink-Newsletters&#34; href=&#34;/email-newsletters&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Newsletters&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;Opinion-checkbox-input&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;label aria-controls=&#34;opinionLinks&#34; aria-haspopup=&#34;true&#34; aria-label=&#34;Toggle Opinion&#34; class=&#34;selectableMenuItem dcr-p0c3jt&#34; data-link-name=&#34;header : secondary : Opinion&#34; data-testid=&#34;column-collapse-Opinion&#34; for=&#34;Opinion-checkbox-input&#34; id=&#34;Opinion-button&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Opinion&lt;/label&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : View all Opinion&#34; data-testid=&#34;column-collapse-sublink-Opinion&#34; href=&#34;/commentisfree&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;View all Opinion&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Columnists&#34; data-testid=&#34;column-collapse-sublink-Columnists&#34; href=&#34;/au/index/contributors&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Columnists&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Cartoons&#34; data-testid=&#34;column-collapse-sublink-Cartoons&#34; href=&#34;/tone/cartoons&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Cartoons&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Indigenous&#34; data-testid=&#34;column-collapse-sublink-Indigenous&#34; href=&#34;/commentisfree/series/indigenousx&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Indigenous&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Editorials&#34; data-testid=&#34;column-collapse-sublink-Editorials&#34; href=&#34;/profile/editorial&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Editorials&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Letters&#34; data-testid=&#34;column-collapse-sublink-Letters&#34; href=&#34;/tone/letters&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Letters&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;Sport-checkbox-input&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;label aria-controls=&#34;sportLinks&#34; aria-haspopup=&#34;true&#34; aria-label=&#34;Toggle Sport&#34; class=&#34;selectableMenuItem dcr-10b2o1s&#34; data-link-name=&#34;header : secondary : Sport&#34; data-testid=&#34;column-collapse-Sport&#34; for=&#34;Sport-checkbox-input&#34; id=&#34;Sport-button&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Sport&lt;/label&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : View all Sport&#34; data-testid=&#34;column-collapse-sublink-Sport&#34; href=&#34;/sport&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;View all Sport&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Football&#34; data-testid=&#34;column-collapse-sublink-Football&#34; href=&#34;/football&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Football&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : AFL&#34; data-testid=&#34;column-collapse-sublink-AFL&#34; href=&#34;/sport/afl&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;AFL&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : NRL&#34; data-testid=&#34;column-collapse-sublink-NRL&#34; href=&#34;/sport/nrl&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;NRL&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : A-League&#34; data-testid=&#34;column-collapse-sublink-A-League&#34; href=&#34;/football/a-league&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;A-League&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Cricket&#34; data-testid=&#34;column-collapse-sublink-Cricket&#34; href=&#34;/sport/cricket&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Cricket&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Rugby union&#34; data-testid=&#34;column-collapse-sublink-Rugby union&#34; href=&#34;/sport/rugby-union&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Rugby union&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Tennis&#34; data-testid=&#34;column-collapse-sublink-Tennis&#34; href=&#34;/sport/tennis&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Tennis&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Cycling&#34; data-testid=&#34;column-collapse-sublink-Cycling&#34; href=&#34;/sport/cycling&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Cycling&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : F1&#34; data-testid=&#34;column-collapse-sublink-F1&#34; href=&#34;/sport/formulaone&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;F1&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;Culture-checkbox-input&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;label aria-controls=&#34;cultureLinks&#34; aria-haspopup=&#34;true&#34; aria-label=&#34;Toggle Culture&#34; class=&#34;selectableMenuItem dcr-x5fwww&#34; data-link-name=&#34;header : secondary : Culture&#34; data-testid=&#34;column-collapse-Culture&#34; for=&#34;Culture-checkbox-input&#34; id=&#34;Culture-button&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Culture&lt;/label&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : View all Culture&#34; data-testid=&#34;column-collapse-sublink-Culture&#34; href=&#34;/culture&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;View all Culture&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Film&#34; data-testid=&#34;column-collapse-sublink-Film&#34; href=&#34;/film&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Film&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Music&#34; data-testid=&#34;column-collapse-sublink-Music&#34; href=&#34;/music&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Music&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Books&#34; data-testid=&#34;column-collapse-sublink-Books&#34; href=&#34;/books&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Books&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : TV &amp;amp; radio&#34; data-testid=&#34;column-collapse-sublink-TV &amp;amp; radio&#34; href=&#34;/tv-and-radio&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;TV &amp;amp; radio&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Art &amp;amp; design&#34; data-testid=&#34;column-collapse-sublink-Art &amp;amp; design&#34; href=&#34;/artanddesign&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Art &amp;amp; design&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Stage&#34; data-testid=&#34;column-collapse-sublink-Stage&#34; href=&#34;/stage&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Stage&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Games&#34; data-testid=&#34;column-collapse-sublink-Games&#34; href=&#34;/games&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Games&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Classical&#34; data-testid=&#34;column-collapse-sublink-Classical&#34; href=&#34;/music/classicalmusicandopera&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Classical&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;Lifestyle-checkbox-input&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;label aria-controls=&#34;lifestyleLinks&#34; aria-haspopup=&#34;true&#34; aria-label=&#34;Toggle Lifestyle&#34; class=&#34;selectableMenuItem dcr-yq9plo&#34; data-link-name=&#34;header : secondary : Lifestyle&#34; data-testid=&#34;column-collapse-Lifestyle&#34; for=&#34;Lifestyle-checkbox-input&#34; id=&#34;Lifestyle-button&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Lifestyle&lt;/label&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : View all Lifestyle&#34; data-testid=&#34;column-collapse-sublink-Lifestyle&#34; href=&#34;/lifeandstyle&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;View all Lifestyle&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Travel&#34; data-testid=&#34;column-collapse-sublink-Travel&#34; href=&#34;/travel&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Travel&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Food&#34; data-testid=&#34;column-collapse-sublink-Food&#34; href=&#34;/au/food&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Food&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Relationships&#34; data-testid=&#34;column-collapse-sublink-Relationships&#34; href=&#34;/au/lifeandstyle/relationships&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Relationships&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Fashion&#34; data-testid=&#34;column-collapse-sublink-Fashion&#34; href=&#34;/au/lifeandstyle/fashion&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Fashion&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Health &amp;amp; fitness&#34; data-testid=&#34;column-collapse-sublink-Health &amp;amp; fitness&#34; href=&#34;/au/lifeandstyle/health-and-wellbeing&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Health &amp;amp; fitness&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Love &amp;amp; sex&#34; data-testid=&#34;column-collapse-sublink-Love &amp;amp; sex&#34; href=&#34;/lifeandstyle/love-and-sex&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Love &amp;amp; sex&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Family&#34; data-testid=&#34;column-collapse-sublink-Family&#34; href=&#34;/lifeandstyle/family&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Family&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Home &amp;amp; garden&#34; data-testid=&#34;column-collapse-sublink-Home &amp;amp; garden&#34; href=&#34;/lifeandstyle/home-and-garden&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Home &amp;amp; garden&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-describedby=&#34;&#34; aria-invalid=&#34;false&#34; aria-required=&#34;true&#34; class=&#34;selectableMenuItem dcr-qcy5wo&#34; data-link-name=&#34;header : search&#34; id=&#34;gu-search&#34; name=&#34;q&#34; placeholder=&#34;Search the Guardian&#34; required=&#34;&#34; tabindex=&#34;-1&#34; type=&#34;text&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;button aria-label=&#34;Search with Google&#34; aria-live=&#34;polite&#34; class=&#34;dcr-1gsboxi&#34; data-link-name=&#34;header : search : submit&#34; tabindex=&#34;-1&#34; type=&#34;submit&#34;&gt;&lt;div class=&#34;src-button-space&#34;&gt;&lt;/div&gt;&lt;svg aria-hidden=&#34;true&#34; viewBox=&#34;-3 -3 30 30&#34; width=&#34;30&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path clip-rule=&#34;evenodd&#34; d=&#34;M1 12.956h18.274l-7.167 8.575.932.932L23 12.478v-.956l-9.96-9.985-.932.932 7.166 8.575H1z&#34; fill-rule=&#34;evenodd&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1rg7stg&#34; data-link-name=&#34;header : secondary : Support us&#34; data-testid=&#34;column-collapse-sublink-Support us&#34; href=&#34;https://support.theguardian.com?INTCMP=side_menu_support&amp;amp;acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support%22%7D&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Support us&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1rg7stg&#34; data-link-name=&#34;header : secondary : Print subscriptions&#34; data-testid=&#34;column-collapse-sublink-Print subscriptions&#34; href=&#34;https://support.theguardian.com/subscribe/weekly?REFPVID=undefined&amp;amp;INTCMP=undefined&amp;amp;acquisitionData=%7B%22source%22%3A%22GUARDIAN_WEB%22%2C%22componentId%22%3A%22PrintSubscriptionsHeaderLink%22%2C%22componentType%22%3A%22ACQUISITIONS_HEADER%22%2C%22referrerUrl%22%3A%22%22%7D&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Print subscriptions&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Events&#34; data-testid=&#34;column-collapse-sublink-Events&#34; href=&#34;/guardian-live-australia&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Events&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Digital Archive&#34; data-testid=&#34;column-collapse-sublink-Digital Archive&#34; href=&#34;https://theguardian.newspapers.com&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Digital Archive&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Australia Weekend&#34; data-testid=&#34;column-collapse-sublink-Australia Weekend&#34; href=&#34;/info/ng-interactive/2021/mar/17/make-sense-of-the-week-with-australia-weekend?INTCMP=header_au_weekend&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Australia Weekend&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Guardian Licensing&#34; data-testid=&#34;column-collapse-sublink-Guardian Licensing&#34; href=&#34;https://licensing.theguardian.com/&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Guardian Licensing&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : About Us&#34; data-testid=&#34;column-collapse-sublink-About Us&#34; href=&#34;/about&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;About Us&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : The Guardian app&#34; data-testid=&#34;column-collapse-sublink-The Guardian app&#34; href=&#34;https://app.adjust.com/16xt6hai&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;The Guardian app&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Video&#34; data-testid=&#34;column-collapse-sublink-Video&#34; href=&#34;/video&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Video&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Podcasts&#34; data-testid=&#34;column-collapse-sublink-Podcasts&#34; href=&#34;/au/podcasts&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Podcasts&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Pictures&#34; data-testid=&#34;column-collapse-sublink-Pictures&#34; href=&#34;/inpictures&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Pictures&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Newsletters&#34; data-testid=&#34;column-collapse-sublink-Newsletters&#34; href=&#34;/email-newsletters&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Newsletters&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Inside the Guardian&#34; data-testid=&#34;column-collapse-sublink-Inside the Guardian&#34; href=&#34;https://www.theguardian.com/insidetheguardian&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Inside the Guardian&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Guardian Weekly&#34; data-testid=&#34;column-collapse-sublink-Guardian Weekly&#34; href=&#34;https://www.theguardian.com/weekly?INTCMP=gdnwb_mawns_editorial_gweekly_GW_TopNav_Aus&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Guardian Weekly&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Crosswords&#34; data-testid=&#34;column-collapse-sublink-Crosswords&#34; href=&#34;/crosswords&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Crosswords&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Wordiply&#34; data-testid=&#34;column-collapse-sublink-Wordiply&#34; href=&#34;https://www.wordiply.com&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Wordiply&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Corrections&#34; data-testid=&#34;column-collapse-sublink-Corrections&#34; href=&#34;/theguardian/series/corrections-and-clarifications&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Corrections&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-describedby=&#34;&#34; aria-invalid=&#34;false&#34; aria-required=&#34;true&#34; class=&#34;selectableMenuItem dcr-qcy5wo&#34; data-link-name=&#34;header : search&#34; id=&#34;gu-search&#34; name=&#34;q&#34; placeholder=&#34;Search the Guardian&#34; required=&#34;&#34; tabindex=&#34;-1&#34; type=&#34;text&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;button aria-label=&#34;Search with Google&#34; aria-live=&#34;polite&#34; class=&#34;dcr-1gsboxi&#34; data-link-name=&#34;header : search : submit&#34; tabindex=&#34;-1&#34; type=&#34;submit&#34;&gt;&lt;div class=&#34;src-button-space&#34;&gt;&lt;/div&gt;&lt;svg aria-hidden=&#34;true&#34; viewBox=&#34;-3 -3 30 30&#34; width=&#34;30&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path clip-rule=&#34;evenodd&#34; d=&#34;M1 12.956h18.274l-7.167 8.575.932.932L23 12.478v-.956l-9.96-9.985-.932.932 7.166 8.575H1z&#34; fill-rule=&#34;evenodd&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/button&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-e3rvah&#34; data-link-name=&#34;header : brand extension : Events&#34; href=&#34;/guardian-live-australia&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Events&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-e3rvah&#34; data-link-name=&#34;header : brand extension : Digital Archive&#34; href=&#34;https://theguardian.newspapers.com&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Digital Archive&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-e3rvah&#34; data-link-name=&#34;header : brand extension : Australia Weekend&#34; href=&#34;/info/ng-interactive/2021/mar/17/make-sense-of-the-week-with-australia-weekend?INTCMP=header_au_weekend&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Australia Weekend&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-e3rvah&#34; data-link-name=&#34;header : brand extension : Guardian Licensing&#34; href=&#34;https://licensing.theguardian.com/&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Guardian Licensing&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-e3rvah&#34; data-link-name=&#34;header : brand extension : About Us&#34; href=&#34;/about&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;About Us&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : View all News&#34; data-testid=&#34;column-collapse-sublink-News&#34; href=&#34;/&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;View all News&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Australia news&#34; data-testid=&#34;column-collapse-sublink-Australia&#34; href=&#34;/australia-news&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Australia news&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : World news&#34; data-testid=&#34;column-collapse-sublink-World&#34; href=&#34;/world&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;World news&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Politics&#34; data-testid=&#34;column-collapse-sublink-AU politics&#34; href=&#34;/australia-news/australian-politics&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Politics&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Environment&#34; data-testid=&#34;column-collapse-sublink-Environment&#34; href=&#34;/environment&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Environment&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Climate crisis&#34; data-testid=&#34;column-collapse-sublink-Climate crisis&#34; href=&#34;/environment/climate-crisis&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Climate crisis&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Indigenous Australia&#34; data-testid=&#34;column-collapse-sublink-Indigenous Australia&#34; href=&#34;/australia-news/indigenous-australians&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Indigenous Australia&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Immigration&#34; data-testid=&#34;column-collapse-sublink-Immigration&#34; href=&#34;/australia-news/australian-immigration-and-asylum&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Immigration&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Media&#34; data-testid=&#34;column-collapse-sublink-Media&#34; href=&#34;/media&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Media&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Business&#34; data-testid=&#34;column-collapse-sublink-Business&#34; href=&#34;/business&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Business&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Health&#34; data-testid=&#34;column-collapse-sublink-Health&#34; href=&#34;/australia-news/health&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Health&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Science&#34; data-testid=&#34;column-collapse-sublink-Science&#34; href=&#34;/science&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Science&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Tech&#34; data-testid=&#34;column-collapse-sublink-Tech&#34; href=&#34;/technology&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Tech&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Podcasts&#34; data-testid=&#34;column-collapse-sublink-Podcasts&#34; href=&#34;/au/podcasts&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Podcasts&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Newsletters&#34; data-testid=&#34;column-collapse-sublink-Newsletters&#34; href=&#34;/email-newsletters&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Newsletters&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : View all Opinion&#34; data-testid=&#34;column-collapse-sublink-Opinion&#34; href=&#34;/commentisfree&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;View all Opinion&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Columnists&#34; data-testid=&#34;column-collapse-sublink-Columnists&#34; href=&#34;/au/index/contributors&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Columnists&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Cartoons&#34; data-testid=&#34;column-collapse-sublink-Cartoons&#34; href=&#34;/tone/cartoons&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Cartoons&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Indigenous&#34; data-testid=&#34;column-collapse-sublink-Indigenous&#34; href=&#34;/commentisfree/series/indigenousx&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Indigenous&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Editorials&#34; data-testid=&#34;column-collapse-sublink-Editorials&#34; href=&#34;/profile/editorial&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Editorials&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Letters&#34; data-testid=&#34;column-collapse-sublink-Letters&#34; href=&#34;/tone/letters&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Letters&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : View all Sport&#34; data-testid=&#34;column-collapse-sublink-Sport&#34; href=&#34;/sport&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;View all Sport&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Football&#34; data-testid=&#34;column-collapse-sublink-Football&#34; href=&#34;/football&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Football&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : AFL&#34; data-testid=&#34;column-collapse-sublink-AFL&#34; href=&#34;/sport/afl&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;AFL&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : NRL&#34; data-testid=&#34;column-collapse-sublink-NRL&#34; href=&#34;/sport/nrl&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;NRL&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : A-League&#34; data-testid=&#34;column-collapse-sublink-A-League&#34; href=&#34;/football/a-league&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;A-League&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Cricket&#34; data-testid=&#34;column-collapse-sublink-Cricket&#34; href=&#34;/sport/cricket&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Cricket&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Rugby union&#34; data-testid=&#34;column-collapse-sublink-Rugby union&#34; href=&#34;/sport/rugby-union&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Rugby union&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Tennis&#34; data-testid=&#34;column-collapse-sublink-Tennis&#34; href=&#34;/sport/tennis&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Tennis&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Cycling&#34; data-testid=&#34;column-collapse-sublink-Cycling&#34; href=&#34;/sport/cycling&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Cycling&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : F1&#34; data-testid=&#34;column-collapse-sublink-F1&#34; href=&#34;/sport/formulaone&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;F1&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : View all Culture&#34; data-testid=&#34;column-collapse-sublink-Culture&#34; href=&#34;/culture&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;View all Culture&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Film&#34; data-testid=&#34;column-collapse-sublink-Film&#34; href=&#34;/film&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Film&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Music&#34; data-testid=&#34;column-collapse-sublink-Music&#34; href=&#34;/music&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Music&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Books&#34; data-testid=&#34;column-collapse-sublink-Books&#34; href=&#34;/books&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Books&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : TV &amp;amp; radio&#34; data-testid=&#34;column-collapse-sublink-TV &amp;amp; radio&#34; href=&#34;/tv-and-radio&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;TV &amp;amp; radio&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Art &amp;amp; design&#34; data-testid=&#34;column-collapse-sublink-Art &amp;amp; design&#34; href=&#34;/artanddesign&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Art &amp;amp; design&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Stage&#34; data-testid=&#34;column-collapse-sublink-Stage&#34; href=&#34;/stage&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Stage&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Games&#34; data-testid=&#34;column-collapse-sublink-Games&#34; href=&#34;/games&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Games&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Classical&#34; data-testid=&#34;column-collapse-sublink-Classical&#34; href=&#34;/music/classicalmusicandopera&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Classical&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : View all Lifestyle&#34; data-testid=&#34;column-collapse-sublink-Lifestyle&#34; href=&#34;/lifeandstyle&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;View all Lifestyle&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Travel&#34; data-testid=&#34;column-collapse-sublink-Travel&#34; href=&#34;/travel&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Travel&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Food&#34; data-testid=&#34;column-collapse-sublink-Food&#34; href=&#34;/au/food&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Food&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Relationships&#34; data-testid=&#34;column-collapse-sublink-Relationships&#34; href=&#34;/au/lifeandstyle/relationships&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Relationships&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Fashion&#34; data-testid=&#34;column-collapse-sublink-Fashion&#34; href=&#34;/au/lifeandstyle/fashion&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Fashion&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Health &amp;amp; fitness&#34; data-testid=&#34;column-collapse-sublink-Health &amp;amp; fitness&#34; href=&#34;/au/lifeandstyle/health-and-wellbeing&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Health &amp;amp; fitness&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Love &amp;amp; sex&#34; data-testid=&#34;column-collapse-sublink-Love &amp;amp; sex&#34; href=&#34;/lifeandstyle/love-and-sex&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Love &amp;amp; sex&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Family&#34; data-testid=&#34;column-collapse-sublink-Family&#34; href=&#34;/lifeandstyle/family&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Family&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1julzi7&#34; data-link-name=&#34;header : secondary : Home &amp;amp; garden&#34; data-testid=&#34;column-collapse-sublink-Home &amp;amp; garden&#34; href=&#34;/lifeandstyle/home-and-garden&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Home &amp;amp; garden&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1rg7stg&#34; data-link-name=&#34;header : secondary : Support us&#34; data-testid=&#34;column-collapse-sublink-Support us&#34; href=&#34;https://support.theguardian.com?INTCMP=side_menu_support&amp;amp;acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support%22%7D&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Support us&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-1rg7stg&#34; data-link-name=&#34;header : secondary : Print subscriptions&#34; data-testid=&#34;column-collapse-sublink-Print subscriptions&#34; href=&#34;https://support.theguardian.com/subscribe/weekly?REFPVID=undefined&amp;amp;INTCMP=undefined&amp;amp;acquisitionData=%7B%22source%22%3A%22GUARDIAN_WEB%22%2C%22componentId%22%3A%22PrintSubscriptionsHeaderLink%22%2C%22componentType%22%3A%22ACQUISITIONS_HEADER%22%2C%22referrerUrl%22%3A%22%22%7D&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Print subscriptions&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Events&#34; data-testid=&#34;column-collapse-sublink-Events&#34; href=&#34;/guardian-live-australia&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Events&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Digital Archive&#34; data-testid=&#34;column-collapse-sublink-Digital Archive&#34; href=&#34;https://theguardian.newspapers.com&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Digital Archive&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Australia Weekend&#34; data-testid=&#34;column-collapse-sublink-Australia Weekend&#34; href=&#34;/info/ng-interactive/2021/mar/17/make-sense-of-the-week-with-australia-weekend?INTCMP=header_au_weekend&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Australia Weekend&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Guardian Licensing&#34; data-testid=&#34;column-collapse-sublink-Guardian Licensing&#34; href=&#34;https://licensing.theguardian.com/&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Guardian Licensing&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : About Us&#34; data-testid=&#34;column-collapse-sublink-About Us&#34; href=&#34;/about&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;About Us&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : The Guardian app&#34; data-testid=&#34;column-collapse-sublink-The Guardian app&#34; href=&#34;https://app.adjust.com/16xt6hai&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;The Guardian app&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Video&#34; data-testid=&#34;column-collapse-sublink-Video&#34; href=&#34;/video&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Video&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Podcasts&#34; data-testid=&#34;column-collapse-sublink-Podcasts&#34; href=&#34;/au/podcasts&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Podcasts&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Pictures&#34; data-testid=&#34;column-collapse-sublink-Pictures&#34; href=&#34;/inpictures&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Pictures&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Newsletters&#34; data-testid=&#34;column-collapse-sublink-Newsletters&#34; href=&#34;/email-newsletters&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Newsletters&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Inside the Guardian&#34; data-testid=&#34;column-collapse-sublink-Inside the Guardian&#34; href=&#34;https://www.theguardian.com/insidetheguardian&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Inside the Guardian&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Guardian Weekly&#34; data-testid=&#34;column-collapse-sublink-Guardian Weekly&#34; href=&#34;https://www.theguardian.com/weekly?INTCMP=gdnwb_mawns_editorial_gweekly_GW_TopNav_Aus&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Guardian Weekly&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Crosswords&#34; data-testid=&#34;column-collapse-sublink-Crosswords&#34; href=&#34;/crosswords&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Crosswords&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Wordiply&#34; data-testid=&#34;column-collapse-sublink-Wordiply&#34; href=&#34;https://www.wordiply.com&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Wordiply&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-a1su5g&#34; data-link-name=&#34;header : secondary : Corrections&#34; data-testid=&#34;column-collapse-sublink-Corrections&#34; href=&#34;/theguardian/series/corrections-and-clarifications&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Corrections&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-e3rvah&#34; data-link-name=&#34;header : brand extension : Events&#34; href=&#34;/guardian-live-australia&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Events&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-e3rvah&#34; data-link-name=&#34;header : brand extension : Digital Archive&#34; href=&#34;https://theguardian.newspapers.com&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Digital Archive&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-e3rvah&#34; data-link-name=&#34;header : brand extension : Australia Weekend&#34; href=&#34;/info/ng-interactive/2021/mar/17/make-sense-of-the-week-with-australia-weekend?INTCMP=header_au_weekend&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Australia Weekend&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-e3rvah&#34; data-link-name=&#34;header : brand extension : Guardian Licensing&#34; href=&#34;https://licensing.theguardian.com/&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;Guardian Licensing&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;a class=&#34;selectableMenuItem dcr-e3rvah&#34; data-link-name=&#34;header : brand extension : About Us&#34; href=&#34;/about&#34; role=&#34;menuitem&#34; tabindex=&#34;-1&#34;&gt;About Us&lt;/a&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-checked=&#34;false&#34; id=&#34;checkbox-id-masthead-edition&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;header-nav-input-checkbox&#34; name=&#34;more&#34; role=&#34;button&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;News-checkbox-input&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;Opinion-checkbox-input&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;Sport-checkbox-input&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;Culture-checkbox-input&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-hidden=&#34;true&#34; class=&#34;dcr-1acea34&#34; id=&#34;Lifestyle-checkbox-input&#34; tabindex=&#34;-1&#34; type=&#34;checkbox&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-describedby=&#34;&#34; aria-invalid=&#34;false&#34; aria-required=&#34;true&#34; class=&#34;selectableMenuItem dcr-qcy5wo&#34; data-link-name=&#34;header : search&#34; id=&#34;gu-search&#34; name=&#34;q&#34; placeholder=&#34;Search the Guardian&#34; required=&#34;&#34; tabindex=&#34;-1&#34; type=&#34;text&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+            <div class="violation error">
+                <h3>Element is programmatically removed from focus order</h3>
+                <p><strong>Severity:</strong> error</p>
+                
+                <p><strong>WCAG Criterion:</strong> 2.4.7</p>
+                
+                <div class="code">&lt;input aria-describedby=&#34;&#34; aria-invalid=&#34;false&#34; aria-required=&#34;true&#34; class=&#34;selectableMenuItem dcr-qcy5wo&#34; data-link-name=&#34;header : search&#34; id=&#34;gu-search&#34; name=&#34;q&#34; placeholder=&#34;Search the Guardian&#34; required=&#34;&#34; tabindex=&#34;-1&#34; type=&#34;text&#34;/&gt;</div>
+                
+                <div class="fix">
+                    <strong>Suggested Fix:</strong> Remove negative tabindex unless deliberately managing focus
+                </div>
+                
+            </div>
+            
+        </section>
+        
+    </div>
+</body>
