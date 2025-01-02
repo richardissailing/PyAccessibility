@@ -1,6 +1,6 @@
 import asyncio
 import sys
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Union
 from rich.progress import Progress, TaskID
 
 import click
@@ -87,19 +87,29 @@ def cli() -> None:
 @click.option(
     "--format",
     "-f",
-    type=click.Choice(["html", "json", "text"]),
+    type=click.Choice(["html", "json", "text", "pdf"]),
     default="text",
     help="Output format",
 )
 @click.option("--rules", "-r", multiple=True, help="Specific rules to check")
 @click.option("--output", "-o", type=click.Path(), help="Output file path")
 @click.option("--verbose", "-v", is_flag=True, help="Show detailed progress")
+@click.option("--email", help="Email address to send report to")
+@click.option("--smtp-host", help="SMTP server host")
+@click.option("--smtp-port", type=int, help="SMTP server port")
+@click.option("--smtp-user", help="SMTP username")
+@click.option("--smtp-password", help="SMTP password")
 def scan(
     target: str,
     format: str,
     rules: Tuple[str, ...],
     output: Optional[str],
-    verbose: bool
+    verbose: bool,
+    email: Optional[str] = None,
+    smtp_host: Optional[str] = None,
+    smtp_port: Optional[int] = None,
+    smtp_user: Optional[str] = None,
+    smtp_password: Optional[str] = None
 ) -> None:
     """Scan a URL or HTML file for accessibility issues."""
     scanner = None
@@ -144,6 +154,7 @@ def scan(
                     )
 
                 # Generate report
+                report: Union[str, bytes]
                 if format == "text":
                     report = format_text_report(result, target)
                 else:
@@ -167,25 +178,29 @@ def scan(
 
                 progress.update(task_id, completed=90)
 
-                # Output report
+                # In the scan function where you handle the output:
                 if output:
                     try:
-                        with open(output, "w", encoding="utf-8") as f:
-                            f.write(
-                                report
-                            )
+                        mode = "wb" if isinstance(report, bytes) else "w"
+                        encoding = None if isinstance(report, bytes) else \
+                            "utf-8"
+
+                        with open(output, mode, encoding=encoding) as f:
+                            if isinstance(report, bytes):
+                                f.write(report)
+                            else:
+                                f.write(report)
+
                         console.print(
                             f"[green]Report saved to {output}[/green]"
                         )
                     except IOError as e:
                         console.print(
-                            "[red]Error saving report:[/red]", str(e)
+                            f"[red]Error saving report:[/red] {str(e)}"
                         )
-                        # Exit with error code for file save failure
                         sys.exit(1)
-                    if format == "text":
-                        console.print(report)
-                    else:
+                else:
+                    if format != "pdf":  # Don't print binary PDF to console
                         click.echo(report)
 
                 violation_count = len(result.violations)

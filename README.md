@@ -77,6 +77,23 @@ poetry run pyaccessibility scan https://example.com --format html > report.html
 
 # List available rules
 poetry run pyaccessibility list-rules
+
+# Generate and email report
+poetry run pyaccessibility scan https://example.com \
+    -f pdf \
+    --email user@example.com \
+    --smtp-host smtp.gmail.com \
+    --smtp-port 587 \
+    --smtp-user your@gmail.com \
+    --smtp-password "your-password"
+
+# Using environment variables for SMTP config
+export PYACCESSIBILITY_SMTP_HOST=smtp.gmail.com
+export PYACCESSIBILITY_SMTP_PORT=587
+export PYACCESSIBILITY_SMTP_USER=your@gmail.com
+export PYACCESSIBILITY_SMTP_PASSWORD="your-password"
+
+poetry run pyaccessibility scan https://example.com -f pdf --email user@example.com
 ```
 ### Python API
 
